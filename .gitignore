@@ -1,0 +1,94 @@
+/.idea/modules/Amazing Numbers/task/Amazing_Numbers.Amazing_Numbers-task.iml
+/.idea/modules/Amazing Numbers/task/Amazing_Numbers.Amazing_Numbers-task.main.iml
+/.idea/modules/Amazing Numbers/task/Amazing_Numbers.Amazing_Numbers-task.test.iml
+/.idea/modules/Amazing_Numbers.iml
+/.idea/modules/util/Amazing_Numbers.util.iml
+/.idea/modules/util/Amazing_Numbers.util.main.iml
+/.idea/modules/util/Amazing_Numbers.util.test.iml
+/build.gradle
+/.gradle/buildOutputCleanup/buildOutputCleanup.lock
+/Amazing Numbers/task/test/BuzzChecker.java
+/.gradle/buildOutputCleanup/cache.properties
+/Amazing Numbers/task/test/util/Checker.java
+/.gradle/checksums/checksums.lock
+/.idea/compiler.xml
+/course-info.yaml
+/course-remote-info.yaml
+/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock
+/.gradle/7.1.1/dependencies-accessors/dependencies-accessors.lock
+/.gradle/7.1/executionHistory/executionHistory.bin
+/.gradle/7.1.1/executionHistory/executionHistory.bin
+/.gradle/7.1/executionHistory/executionHistory.lock
+/.gradle/7.1.1/executionHistory/executionHistory.lock
+/.idea/externalDependencies.xml
+/.gradle/7.1/fileHashes/fileHashes.bin
+/.gradle/7.1.1/fileHashes/fileHashes.bin
+/.gradle/7.1/fileHashes/fileHashes.lock
+/.gradle/7.1.1/fileHashes/fileHashes.lock
+/.gradle/7.1/dependencies-accessors/gc.properties
+/.gradle/7.1/gc.properties
+/.gradle/7.1.1/dependencies-accessors/gc.properties
+/.gradle/7.1.1/gc.properties
+/.gradle/vcs-1/gc.properties
+/.idea/gradle.xml
+/gradle/wrapper/gradle-wrapper.jar
+/gradle/wrapper/gradle-wrapper.properties
+/.idea/libraries/Gradle__com_github_hyperskill_hs_test_release_SNAPSHOT.xml
+/.idea/libraries/Gradle__com_google_code_gson_gson_2_8_5.xml
+/.idea/libraries/Gradle__commons_codec_commons_codec_1_11.xml
+/.idea/libraries/Gradle__commons_logging_commons_logging_1_2.xml
+/.idea/libraries/Gradle__junit_junit_4_12.xml
+/.idea/libraries/Gradle__org_apache_httpcomponents_httpclient_4_5_9.xml
+/.idea/libraries/Gradle__org_apache_httpcomponents_httpcore_4_4_11.xml
+/.idea/libraries/Gradle__org_assertj_assertj_core_3_11_1.xml
+/.idea/libraries/Gradle__org_assertj_assertj_swing_3_9_2.xml
+/.idea/libraries/Gradle__org_assertj_assertj_swing_junit_3_9_2.xml
+/.idea/libraries/Gradle__org_easytesting_fest_reflect_1_4_1.xml
+/.idea/libraries/Gradle__org_easytesting_fest_util_1_2_5.xml
+/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml
+/gradlew
+/gradlew.bat
+/.idea/jarRepositories.xml
+/.gradle/7.1/fileChanges/last-build.bin
+/.gradle/7.1.1/fileChanges/last-build.bin
+/Amazing Numbers/lesson-info.yaml
+/Amazing Numbers/task/test/util/LinesChecker.java
+/.gradle/checksums/md5-checksums.bin
+/.idea/misc.xml
+/.idea/modules.xml
+/Amazing Numbers/task/test/NumbersTest.java
+/.gradle/buildOutputCleanup/outputFiles.bin
+/Amazing Numbers/task/test/util/RegexChecker.java
+/.idea/runConfigurations.xml
+/settings.gradle
+/.gradle/checksums/sha1-checksums.bin
+/.idea/frameworkLessonHistory/storage.storageData
+/.idea/frameworkLessonHistory/storage.storageRecordIndex
+/Amazing Numbers/Buzz numbers/task.html
+/Amazing Numbers/Duck numbers/task.html
+/Amazing Numbers/Gapful numbers/task.html
+/Amazing Numbers/Happy and Sad numbers/task.html
+/Amazing Numbers/Jumping numbers/task.html
+/Amazing Numbers/Palindromic numbers/task.html
+/Amazing Numbers/Spy numbers/task.html
+/Amazing Numbers/Sunny and Square numbers/task.html
+/Amazing Numbers/Buzz numbers/task-info.yaml
+/Amazing Numbers/Duck numbers/task-info.yaml
+/Amazing Numbers/Gapful numbers/task-info.yaml
+/Amazing Numbers/Happy and Sad numbers/task-info.yaml
+/Amazing Numbers/Jumping numbers/task-info.yaml
+/Amazing Numbers/Palindromic numbers/task-info.yaml
+/Amazing Numbers/Spy numbers/task-info.yaml
+/Amazing Numbers/Sunny and Square numbers/task-info.yaml
+/Amazing Numbers/Buzz numbers/task-remote-info.yaml
+/Amazing Numbers/Duck numbers/task-remote-info.yaml
+/Amazing Numbers/Gapful numbers/task-remote-info.yaml
+/Amazing Numbers/Happy and Sad numbers/task-remote-info.yaml
+/Amazing Numbers/Jumping numbers/task-remote-info.yaml
+/Amazing Numbers/Palindromic numbers/task-remote-info.yaml
+/Amazing Numbers/Spy numbers/task-remote-info.yaml
+/Amazing Numbers/Sunny and Square numbers/task-remote-info.yaml
+/Amazing Numbers/task/test/util/TextChecker.java
+/Amazing Numbers/task/test/util/UserProgram.java
+/.idea/vcs.xml
+/.idea/.gitignore
