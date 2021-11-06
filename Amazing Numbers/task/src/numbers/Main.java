@@ -8,7 +8,7 @@ public class Main {
         NumberGetter numberGetter = new NumberGetter();
         NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
         int number = numberGetter.getNumber();
-
-
+        numberAnalyzer.checkBuzzNumber(number);
+        numberAnalyzer.checkParityNumber(number);
     }
 }

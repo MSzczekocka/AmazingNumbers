@@ -2,15 +2,23 @@ package numbers.request;
 
 public class NumberAnalyzer {
 
-    public String checkBuzzNumber(int number) {
+    public void checkBuzzNumber(int number) {
         if (isDivisible(number)&&endWith7(number)){
-            return number + " is divisible by 7 and ends with 7";
+            System.out.println("It is a Buzz number");
+            System.out.println("Explanation:");
+            System.out.println(number + " is divisible by 7 and ends with 7");
         }else if (isDivisible(number)){
-            return number + " is divisible by 7";
+            System.out.println("It is a Buzz number");
+            System.out.println("Explanation:");
+            System.out.println(number + " is divisible by 7");
         }else if (endWith7(number)){
-            return number + " ends with 7";
+            System.out.println("It is a Buzz number");
+            System.out.println("Explanation:");
+            System.out.println(number + " ends with 7");
         }else{
-            return number + " is neither divisible by 7 nor does it end with 7";
+            System.out.println("It is not a Buzz number.");
+            System.out.println("Explanation:");
+            System.out.println(number + " is neither divisible by 7 nor does it end with 7");
         }
     }
 
@@ -22,10 +30,11 @@ public class NumberAnalyzer {
         return numS.charAt(numS.length()-1)=='7';
     }
 
-    public String checkParityNumber(int number) {
+    public void checkParityNumber(int number) {
         if(number%2==0){
-            return "This number is Even.";
+            System.out.println("This number is Even.");
+        }else{
+            System.out.println("This number is Odd.");
         }
-        return "This number is Odd.";
     }
 }
