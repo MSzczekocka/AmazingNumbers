@@ -2,7 +2,6 @@ package numbers.request;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.function.DoubleToLongFunction;
 
 public class NumberGetter {
 

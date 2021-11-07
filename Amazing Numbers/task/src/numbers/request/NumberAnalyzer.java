@@ -22,4 +22,10 @@ public class NumberAnalyzer {
         String numS = String.valueOf(number);
         return numS.contains("0");
     }
+
+    public boolean isPalindromic(int number){
+        String numberS = String.valueOf(number);
+        String numReverse = new StringBuffer(numberS).reverse().toString();
+        return numberS.equals(numReverse);
+    }
 }

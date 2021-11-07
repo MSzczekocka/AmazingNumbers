@@ -5,7 +5,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class NumberAnalyzerTest {
-    @Test
+   @Test
     public void checkNumber_DivEnd7Test(){
         //given
         NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
@@ -82,6 +82,36 @@ public class NumberAnalyzerTest {
         int number = 5889;
         //when
         boolean result = numberAnalyzer.isDuck(number);
+        //then
+        Assert.assertFalse(result);
+    }
+    @Test
+    public void isPalindromic_OkTest(){
+        //given
+        NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
+        int number = 12588521;
+        //when
+        boolean result = numberAnalyzer.isPalindromic(number);
+        //then
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void isPalindromic_OkTest2(){
+        //given
+        NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
+        int number = 1158511;
+        //when
+        boolean result = numberAnalyzer.isPalindromic(number);
+        //then
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void isPalindromic_NokTest(){
+        //given
+        NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
+        int number = 14536;
+        //when
+        boolean result = numberAnalyzer.isPalindromic(number);
         //then
         Assert.assertFalse(result);
     }
