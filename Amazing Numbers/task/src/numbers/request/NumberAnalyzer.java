@@ -11,6 +11,7 @@ public class NumberAnalyzer {
     private static boolean isDivisible(BigInteger number){
         return (number.mod(new BigInteger("7"))).equals(new BigInteger("0"));
     }
+
     private static boolean endWith7(BigInteger number){
         String numS = String.valueOf(number);
         return numS.charAt(numS.length()-1)=='7';
@@ -29,5 +30,14 @@ public class NumberAnalyzer {
         String numberS = String.valueOf(number);
         String numReverse = new StringBuffer(numberS).reverse().toString();
         return numberS.equals(numReverse);
+    }
+
+    public boolean isGapful(BigInteger number) {
+        String numberS = String.valueOf(number);
+        if(numberS.length()<3){
+            return false;
+        }
+        String divS = numberS.charAt(0)+numberS.substring(numberS.length()-1);
+        return (number.mod(new BigInteger(divS))).equals(new BigInteger("0"));
     }
 }

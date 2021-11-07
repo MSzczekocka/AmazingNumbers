@@ -116,4 +116,34 @@ public class NumberAnalyzerTest {
         //then
         Assert.assertFalse(result);
     }
+    @Test
+    public void isGapful_OkTest(){
+        //given
+        NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
+        BigInteger number = new BigInteger("7881");
+        //when
+        boolean result = numberAnalyzer.isGapful(number);
+        //then
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void isGapful_NokTest(){
+        //given
+        NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
+        BigInteger number = new BigInteger("12");
+        //when
+        boolean result = numberAnalyzer.isGapful(number);
+        //then
+        Assert.assertFalse(result);
+    }
+    @Test
+    public void isGapful_NokTest2(){
+        //given
+        NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
+        BigInteger number = new BigInteger("3753735");
+        //when
+        boolean result = numberAnalyzer.isGapful(number);
+        //then
+        Assert.assertFalse(result);
+    }
 }
