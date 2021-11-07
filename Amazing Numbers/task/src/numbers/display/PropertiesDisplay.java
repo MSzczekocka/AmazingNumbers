@@ -10,5 +10,6 @@ public class PropertiesDisplay {
         System.out.println("        even: " + numberAnalyzer.isEven(number));
         System.out.println("         odd: " + !numberAnalyzer.isEven(number));
         System.out.println("        buzz: " + numberAnalyzer.checkBuzzNumber(number));
+        System.out.println("        duck: " + numberAnalyzer.isDuck(number));
     }
 }

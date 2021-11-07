@@ -45,7 +45,6 @@ public class NumberAnalyzerTest {
         //then
         Assert.assertFalse(result);
     }
-
     @Test
     public void checkParityNumber_OddTest(){
         //given
@@ -59,11 +58,31 @@ public class NumberAnalyzerTest {
     @Test
     public void checkParityNumber_EvenTest(){
         //given
-        NumberAnalyzer numberParityAnalyzer = new NumberAnalyzer();
+        NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
         int number = 10;
         //when
-        boolean result = numberParityAnalyzer.isEven(number);
+        boolean result = numberAnalyzer.isEven(number);
         //then
         Assert.assertTrue(result);
+    }
+    @Test
+    public void isDuck_OkTest(){
+        //given
+        NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
+        int number = 10507;
+        //when
+        boolean result = numberAnalyzer.isDuck(number);
+        //then
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void isDuck_NokTest(){
+        //given
+        NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
+        int number = 5889;
+        //when
+        boolean result = numberAnalyzer.isDuck(number);
+        //then
+        Assert.assertFalse(result);
     }
 }

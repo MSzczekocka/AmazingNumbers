@@ -17,4 +17,9 @@ public class NumberAnalyzer {
     public boolean isEven(int number) {
         return number % 2 == 0;
     }
+
+    public boolean isDuck(int number) {
+        String numS = String.valueOf(number);
+        return numS.contains("0");
+    }
 }
