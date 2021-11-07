@@ -1,29 +1,31 @@
 package numbers.request;
 
+import java.math.BigInteger;
+
 public class NumberAnalyzer {
 
-    public boolean checkBuzzNumber(int number) {
+    public boolean checkBuzzNumber(BigInteger number) {
         return isDivisible(number) || endWith7(number);
     }
 
-    private static boolean isDivisible(int number){
-        return number%7==0;
+    private static boolean isDivisible(BigInteger number){
+        return (number.mod(new BigInteger("7"))).equals(new BigInteger("0"));
     }
-    private static boolean endWith7(int number){
+    private static boolean endWith7(BigInteger number){
         String numS = String.valueOf(number);
         return numS.charAt(numS.length()-1)=='7';
     }
 
-    public boolean isEven(int number) {
-        return number % 2 == 0;
+    public boolean isEven(BigInteger number) {
+        return (number.mod(new BigInteger("2"))).equals(new BigInteger("0"));
     }
 
-    public boolean isDuck(int number) {
+    public boolean isDuck(BigInteger number) {
         String numS = String.valueOf(number);
         return numS.contains("0");
     }
 
-    public boolean isPalindromic(int number){
+    public boolean isPalindromic(BigInteger number){
         String numberS = String.valueOf(number);
         String numReverse = new StringBuffer(numberS).reverse().toString();
         return numberS.equals(numReverse);

@@ -4,13 +4,14 @@ import numbers.request.NumberAnalyzer;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.math.BigInteger;
+
 public class NumberAnalyzerTest {
    @Test
     public void checkNumber_DivEnd7Test(){
         //given
         NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
-        int number = 77;
-        //when
+        BigInteger number = new BigInteger("77");
         boolean result = numberAnalyzer.checkBuzzNumber(number);
         //then
         Assert.assertTrue(result);
@@ -19,7 +20,7 @@ public class NumberAnalyzerTest {
     public void checkNumber_Div7Test(){
         //given
         NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
-        int number = 21;
+        BigInteger number = new BigInteger("21");
         //when
         boolean result = numberAnalyzer.checkBuzzNumber(number);
         //then
@@ -29,7 +30,7 @@ public class NumberAnalyzerTest {
     public void checkNumber_End7Test(){
         //given
         NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
-        int number = 37;
+        BigInteger number = new BigInteger("37");
         //when
         boolean result = numberAnalyzer.checkBuzzNumber(number);
         //then
@@ -39,7 +40,7 @@ public class NumberAnalyzerTest {
     public void checkNumber_NokTest(){
         //given
         NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
-        int number = 50;
+        BigInteger number = new BigInteger("50");
         //when
         boolean result = numberAnalyzer.checkBuzzNumber(number);
         //then
@@ -49,7 +50,7 @@ public class NumberAnalyzerTest {
     public void checkParityNumber_OddTest(){
         //given
         NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
-        int number = 3;
+        BigInteger number = new BigInteger("3");
         //when
         boolean result = numberAnalyzer.isEven(number);
         //then
@@ -59,7 +60,7 @@ public class NumberAnalyzerTest {
     public void checkParityNumber_EvenTest(){
         //given
         NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
-        int number = 10;
+        BigInteger number = new BigInteger("10");
         //when
         boolean result = numberAnalyzer.isEven(number);
         //then
@@ -69,7 +70,7 @@ public class NumberAnalyzerTest {
     public void isDuck_OkTest(){
         //given
         NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
-        int number = 10507;
+        BigInteger number = new BigInteger("10507");
         //when
         boolean result = numberAnalyzer.isDuck(number);
         //then
@@ -79,7 +80,7 @@ public class NumberAnalyzerTest {
     public void isDuck_NokTest(){
         //given
         NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
-        int number = 5889;
+        BigInteger number = new BigInteger("5889");
         //when
         boolean result = numberAnalyzer.isDuck(number);
         //then
@@ -89,7 +90,7 @@ public class NumberAnalyzerTest {
     public void isPalindromic_OkTest(){
         //given
         NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
-        int number = 12588521;
+        BigInteger number = new BigInteger("12588521");
         //when
         boolean result = numberAnalyzer.isPalindromic(number);
         //then
@@ -99,7 +100,7 @@ public class NumberAnalyzerTest {
     public void isPalindromic_OkTest2(){
         //given
         NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
-        int number = 1158511;
+        BigInteger number = new BigInteger("1158511");
         //when
         boolean result = numberAnalyzer.isPalindromic(number);
         //then
@@ -109,7 +110,7 @@ public class NumberAnalyzerTest {
     public void isPalindromic_NokTest(){
         //given
         NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
-        int number = 14536;
+        BigInteger number = new BigInteger("14536");
         //when
         boolean result = numberAnalyzer.isPalindromic(number);
         //then

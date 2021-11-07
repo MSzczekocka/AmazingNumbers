@@ -2,9 +2,11 @@ package numbers.display;
 
 import numbers.request.NumberAnalyzer;
 
+import java.math.BigInteger;
+
 public class PropertiesDisplay {
 
-    public void displayProperties(int number){
+    public void displayProperties(BigInteger number){
         NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
         System.out.println("Properties of " + number);
         System.out.println("        even: " + numberAnalyzer.isEven(number));

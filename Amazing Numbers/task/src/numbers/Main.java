@@ -4,11 +4,13 @@ import numbers.display.PropertiesDisplay;
 import numbers.request.NumberAnalyzer;
 import numbers.request.NumberGetter;
 
+import java.math.BigInteger;
+
 public class Main {
     public static void main(String[] args) {
         NumberGetter numberGetter = new NumberGetter();
         PropertiesDisplay propertiesDisplay = new PropertiesDisplay();
-        int number;
+        BigInteger number;
         System.out.println("Welcome to Amazing Numbers!");
         System.out.println("");
         System.out.println("Supported requests:");
