@@ -17,6 +17,10 @@ public class NumberGetter {
                 System.out.println("This number is not natural!");
             }
             scanner.nextLine();
+            if (number < 1){
+                System.out.println("This number is not natural!");
+                System.exit(0);
+            }
         } while (number < 1);
 
         return number;
