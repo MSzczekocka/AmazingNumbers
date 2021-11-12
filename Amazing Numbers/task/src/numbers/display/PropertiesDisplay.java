@@ -1,6 +1,6 @@
 package numbers.display;
 
-import numbers.request.NumberAnalyzer;
+import numbers.number.NumberAnalyzer;
 
 import java.math.BigInteger;
 
