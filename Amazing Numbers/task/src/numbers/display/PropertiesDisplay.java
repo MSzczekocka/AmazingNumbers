@@ -16,4 +16,4 @@ public class PropertiesDisplay {
         System.out.println("        even: " + numberAnalyzer.isEven(number));
         System.out.println("         odd: " + !numberAnalyzer.isEven(number));
     }
-}
+} 
