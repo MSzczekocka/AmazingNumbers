@@ -14,7 +14,7 @@ public class InputAnalyzerTest {
         InputAnalyzer inputAnalyzer = new InputAnalyzer();
         String input = "1000";
         //when
-        boolean result = inputAnalyzer.isNumeric(input);
+        boolean result = inputAnalyzer.isValid(input);
         //then
         Assert.assertTrue(result);
     }
@@ -24,7 +24,7 @@ public class InputAnalyzerTest {
         InputAnalyzer inputAnalyzer = new InputAnalyzer();
         String input = "3434 4";
         //when
-        boolean result = inputAnalyzer.isNumeric(input);
+        boolean result = inputAnalyzer.isValid(input);
         //then
         Assert.assertTrue(result);
     }
@@ -34,7 +34,7 @@ public class InputAnalyzerTest {
         InputAnalyzer inputAnalyzer = new InputAnalyzer();
         String input = "ABCabc";
         //when
-        boolean result = inputAnalyzer.isNumeric(input);
+        boolean result = inputAnalyzer.isValid(input);
         //then
         Assert.assertFalse(result);
     }
@@ -44,30 +44,58 @@ public class InputAnalyzerTest {
         InputAnalyzer inputAnalyzer = new InputAnalyzer();
         String input = "3434   4  ";
         //when
-        boolean result = inputAnalyzer.isNumeric(input);
+        boolean result = inputAnalyzer.isValid(input);
         //then
         Assert.assertFalse(result);
     }
     @Test
-    public void getInput_OkTest(){
+    public void isNegative_OkTest(){
         //given
         InputAnalyzer inputAnalyzer = new InputAnalyzer();
-        String input = "34";
-        Input excepted = new Input(new BigInteger("34"),1);
+        String input = "-6547";
         //when
-        Input result = inputAnalyzer.getInput(input);
+        boolean result = inputAnalyzer.isNegative1(input);
         //then
-        Assert.assertEquals(excepted, result);
+        Assert.assertTrue(result);
     }
     @Test
-    public void getInput_OkTes2t(){
+    public void isNegative_OkTest2(){
         //given
         InputAnalyzer inputAnalyzer = new InputAnalyzer();
-        String input = "135 6";
-        Input excepted = new Input(new BigInteger("135"),6);
+        String input = "-4788 1";
         //when
-        Input result = inputAnalyzer.getInput(input);
+        boolean result = inputAnalyzer.isNegative1(input);
         //then
-        Assert.assertEquals(excepted, result);
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void isNegative_OkTest3(){
+        //given
+        InputAnalyzer inputAnalyzer = new InputAnalyzer();
+        String input = "76405 -67";
+        //when
+        boolean result = inputAnalyzer.isNegative2(input);
+        //then
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void isNegative_OkTest4(){
+        //given
+        InputAnalyzer inputAnalyzer = new InputAnalyzer();
+        String input = "-985 -4";
+        //when
+        boolean result = inputAnalyzer.isNegative1(input);
+        //then
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void isNegative_OkTest5(){
+        //given
+        InputAnalyzer inputAnalyzer = new InputAnalyzer();
+        String input = "5835 -8283";
+        //when
+        boolean result = inputAnalyzer.isValid(input);
+        //then
+        Assert.assertFalse(result);
     }
 }

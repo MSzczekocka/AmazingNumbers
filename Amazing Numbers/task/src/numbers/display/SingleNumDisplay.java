@@ -14,6 +14,7 @@ public class SingleNumDisplay {
         System.out.println("        duck: " + numberAnalyzer.isDuck(number));
         System.out.println(" palindromic: " + numberAnalyzer.isPalindromic(number));
         System.out.println("      gapful: " + numberAnalyzer.isGapful(number));
+        System.out.println("         spy: " + numberAnalyzer.isSpy(number));
         System.out.println("        even: " + numberAnalyzer.isEven(number));
         System.out.println("         odd: " + !numberAnalyzer.isEven(number));
         System.out.println("");

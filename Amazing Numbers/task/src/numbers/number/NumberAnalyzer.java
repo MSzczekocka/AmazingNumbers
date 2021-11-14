@@ -40,4 +40,19 @@ public class NumberAnalyzer {
         String divS = numberS.charAt(0)+numberS.substring(numberS.length()-1);
         return (number.mod(new BigInteger(divS))).equals(new BigInteger("0"));
     }
+
+    public boolean isSpy(BigInteger number){
+        String numS = number.toString();
+        BigInteger numAdd = new BigInteger("0");
+        BigInteger numMul = new BigInteger("1");
+        for (int i = 0; i < numS.length(); i++) {
+            String temp = numS.substring(i,i+1);
+            numAdd = numAdd.add(new BigInteger(temp));
+        }
+        for (int i = 0; i < numS.length(); i++) {
+            String temp = numS.substring(i,i+1);
+            numMul = numMul.multiply(new BigInteger(temp));
+        }
+        return numAdd.compareTo(numMul)==0;
+    }
 }

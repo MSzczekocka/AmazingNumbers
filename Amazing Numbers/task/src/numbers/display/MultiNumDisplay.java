@@ -26,6 +26,9 @@ public class MultiNumDisplay {
             if(numberAnalyzer.isGapful(number)){
                 properties.add("gapful");
             }
+            if(numberAnalyzer.isSpy(number)){
+                properties.add("spy");
+            }
             if(numberAnalyzer.isEven(number)){
                 properties.add("even");
             }else{
