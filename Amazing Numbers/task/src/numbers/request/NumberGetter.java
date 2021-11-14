@@ -1,6 +1,5 @@
 package numbers.request;
 
-import java.math.BigInteger;
 import java.util.Scanner;
 
 public class NumberGetter {
@@ -15,7 +14,7 @@ public class NumberGetter {
         }while (!analyzer.isNumeric(input));
 
         analyzer.isZero(input);
-        return new Input(new BigInteger("0"),0);
+        return analyzer.getInput(input);
     }
 
 
