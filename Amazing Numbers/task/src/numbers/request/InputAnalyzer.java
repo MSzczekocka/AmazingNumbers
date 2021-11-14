@@ -3,14 +3,32 @@ package numbers.request;
 import java.math.BigInteger;
 
 public class InputAnalyzer {
-    public boolean isNumeric(String input){
+    public boolean isValid(String input){
+        BigInteger number;
         String newInput = input.replaceFirst(" ","");
+        if(isNegative1(input)){
+            System.out.println("The first parameter should be a natural number or zero.");
+            return false;
+        }
+        if(isNegative2(input)){
+            System.out.println("The second parameter should be a natural number.");
+            return false;
+        }
         try{
-            Double.parseDouble(newInput);
+            number = new BigInteger(newInput);
         }catch (NumberFormatException ex){
+            System.out.println("The first parameter should be a natural number or zero.");
             return false;
         }
         return true;
+    }
+
+    public boolean isNegative1(String input){
+        return input.charAt(0)=='-';
+    }
+
+    public boolean isNegative2(String input){
+        return input.contains("-");
     }
 
     public void isZero(String input){
@@ -19,20 +37,4 @@ public class InputAnalyzer {
             System.exit(0);
         }
     }
-
-    public Input getInput(String input){
-        int index = input.indexOf(" ");
-        BigInteger number;
-        int noOfNum;
-        if(index==-1){
-            number = new BigInteger(input);
-            return new Input(number,1);
-        }else{
-            number = new BigInteger(input.substring(0,index));
-            String noS = input.substring(index+1);
-            noOfNum = Integer.parseInt(noS);
-            return new Input(number,noOfNum);
-        }
-    }
-
 }

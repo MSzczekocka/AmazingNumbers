@@ -1,6 +1,6 @@
 package util;
 
-import numbers.number.NumberAnalyzer;
+import numbers.request.NumberAnalyzer;
 import org.junit.Assert;
 import org.junit.Test;
 
