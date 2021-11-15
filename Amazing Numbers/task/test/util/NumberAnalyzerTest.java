@@ -116,14 +116,4 @@ public class NumberAnalyzerTest {
         //then
         Assert.assertFalse(result);
     }
-    @Test
-    public void isSpy_OkTest(){
-        //given
-        NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
-        BigInteger number = new BigInteger("1124");
-        //when
-        boolean result = numberAnalyzer.isSpy(number);
-        //then
-        Assert.assertTrue(result);
-    }
 }
