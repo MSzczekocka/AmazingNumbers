@@ -1,34 +1,26 @@
 package numbers.request;
 
 import java.math.BigInteger;
+import java.util.Arrays;
 
 public class InputAnalyzer {
-    public boolean isValid(String input){
-        BigInteger number;
-        String newInput = input.replaceFirst(" ","");
-        if(isNegative1(input)){
-            System.out.println("The first parameter should be a natural number or zero.");
-            return false;
-        }
-        if(isNegative2(input)){
-            System.out.println("The second parameter should be a natural number.");
-            return false;
-        }
+
+    public boolean isNegative(String input){
+        return input.charAt(0)=='-';
+    }
+
+    public boolean isNumeric(String input){
         try{
-            number = new BigInteger(newInput);
+            BigInteger number = new BigInteger(input);
         }catch (NumberFormatException ex){
-            System.out.println("The first parameter should be a natural number or zero.");
             return false;
         }
         return true;
     }
 
-    public boolean isNegative1(String input){
-        return input.charAt(0)=='-';
-    }
-
-    public boolean isNegative2(String input){
-        return input.contains("-");
+    public boolean okProperties(String input){
+        String[] ok = {"even","odd","buzz","duck","palindromic","gapful","spy"};
+        return Arrays.asList(ok).contains(input.toLowerCase());
     }
 
     public void isZero(String input){

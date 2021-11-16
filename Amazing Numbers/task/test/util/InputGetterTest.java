@@ -13,7 +13,7 @@ public class InputGetterTest {
         //given
         InputGetter inputGetter = new InputGetter();
         String input = "34";
-        Input excepted = new Input(new BigInteger("34"),1);
+        Input excepted = new Input(new BigInteger("34"),1,"all");
         //when
         Input result = inputGetter.getInput(input);
         //then
@@ -24,7 +24,7 @@ public class InputGetterTest {
         //given
         InputGetter inputGetter = new InputGetter();
         String input = "135 6";
-        Input excepted = new Input(new BigInteger("135"),6);
+        Input excepted = new Input(new BigInteger("135"),6, "all");
         //when
         Input result = inputGetter.getInput(input);
         //then
