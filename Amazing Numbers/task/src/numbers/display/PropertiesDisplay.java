@@ -12,8 +12,5 @@ public class PropertiesDisplay {
         } else {
             multiNumDisplay.numbersDisplay(request);
         }
-//        else{
-//
-//        }
     }
 }

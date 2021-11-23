@@ -8,94 +8,64 @@ import org.junit.Test;
 import java.math.BigInteger;
 
 public class InputAnalyzerTest {
-//    @Test
-//    public void isNumeric_OkTest(){
-//        //given
-//        InputAnalyzer inputAnalyzer = new InputAnalyzer();
-//        String input = "1000";
-//        //when
-//        boolean result = inputAnalyzer.isValid(input);
-//        //then
-//        Assert.assertTrue(result);
-//    }
-//    @Test
-//    public void isNumeric_OkTest2(){
-//        //given
-//        InputAnalyzer inputAnalyzer = new InputAnalyzer();
-//        String input = "3434 4";
-//        //when
-//        boolean result = inputAnalyzer.isValid(input);
-//        //then
-//        Assert.assertTrue(result);
-//    }
-//    @Test
-//    public void isNumeric_NokTest(){
-//        //given
-//        InputAnalyzer inputAnalyzer = new InputAnalyzer();
-//        String input = "ABCabc";
-//        //when
-//        boolean result = inputAnalyzer.isValid(input);
-//        //then
-//        Assert.assertFalse(result);
-//    }
-//    @Test
-//    public void isNumeric_NokTest2(){
-//        //given
-//        InputAnalyzer inputAnalyzer = new InputAnalyzer();
-//        String input = "3434   4  ";
-//        //when
-//        boolean result = inputAnalyzer.isValid(input);
-//        //then
-//        Assert.assertFalse(result);
-//    }
-//    @Test
-//    public void isNegative_OkTest(){
-//        //given
-//        InputAnalyzer inputAnalyzer = new InputAnalyzer();
-//        String input = "-6547";
-//        //when
-//        boolean result = inputAnalyzer.isNegative1(input);
-//        //then
-//        Assert.assertTrue(result);
-//    }
-//    @Test
-//    public void isNegative_OkTest2(){
-//        //given
-//        InputAnalyzer inputAnalyzer = new InputAnalyzer();
-//        String input = "-4788 1";
-//        //when
-//        boolean result = inputAnalyzer.isNegative1(input);
-//        //then
-//        Assert.assertTrue(result);
-//    }
-//    @Test
-//    public void isNegative_OkTest3(){
-//        //given
-//        InputAnalyzer inputAnalyzer = new InputAnalyzer();
-//        String input = "76405 -67";
-//        //when
-//        boolean result = inputAnalyzer.isNegative2(input);
-//        //then
-//        Assert.assertTrue(result);
-//    }
-//    @Test
-//    public void isNegative_OkTest4(){
-//        //given
-//        InputAnalyzer inputAnalyzer = new InputAnalyzer();
-//        String input = "-985 -4";
-//        //when
-//        boolean result = inputAnalyzer.isNegative1(input);
-//        //then
-//        Assert.assertTrue(result);
-//    }
-//    @Test
-//    public void isNegative_OkTest5(){
-//        //given
-//        InputAnalyzer inputAnalyzer = new InputAnalyzer();
-//        String input = "5835 -8283";
-//        //when
-//        boolean result = inputAnalyzer.isValid(input);
-//        //then
-//        Assert.assertFalse(result);
-//    }
+    @Test
+    public void isNegative_okTest(){
+        //given
+        InputAnalyzer analyzer = new InputAnalyzer();
+        String request = "-45";
+        //when
+        boolean result = analyzer.isNegative(request);
+        //then
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void isNegative_nokTest(){
+        //given
+        InputAnalyzer analyzer = new InputAnalyzer();
+        String request = "436";
+        //when
+        boolean result = analyzer.isNegative(request);
+        //then
+        Assert.assertFalse(result);
+    }
+    @Test
+    public void isNumeric_okTest(){
+        //given
+        InputAnalyzer analyzer = new InputAnalyzer();
+        String request = "7993";
+        //when
+        boolean result = analyzer.isNumeric(request);
+        //then
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void isNumeric_nokTest(){
+        //given
+        InputAnalyzer analyzer = new InputAnalyzer();
+        String request = "xyz";
+        //when
+        boolean result = analyzer.isNumeric(request);
+        //then
+        Assert.assertFalse(result);
+    }
+    @Test
+    public void okProperties_okTest(){
+        //given
+        InputAnalyzer analyzer = new InputAnalyzer();
+        String request = "spy";
+        //when
+        boolean result = analyzer.okProperties(request);
+        //then
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void okProperties_nokTest(){
+        //given
+        InputAnalyzer analyzer = new InputAnalyzer();
+        String request = "abc";
+        //when
+        boolean result = analyzer.okProperties(request);
+        //then
+        Assert.assertFalse(result);
+    }
 }
