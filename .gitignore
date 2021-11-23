@@ -343,7 +343,7 @@
 /Amazing Numbers/task/build/classes/java/main/numbers/display/SingleNumDisplay.class
 /Amazing Numbers/task/build/test-results/test/TEST-util.InputGetterTest.xml
 /Amazing Numbers/task/build/reports/tests/test/classes/util.InputGetterTest.html
-/Amazing Numbers/task/out*
+/Amazing Numbers/task/out/*
 /Amazing Numbers/task/build/tmp/test/jar_extract_1457096835485643813_tmp
 /Amazing Numbers/task/build/tmp/test/jar_extract_2055518127819406672_tmp
 /Amazing Numbers/task/build/tmp/test/jar_extract_4104697811614892760_tmp
@@ -362,3 +362,5 @@
 /Amazing Numbers/task/build/tmp/test/jar_extract_15585212546978290116_tmp
 /Amazing Numbers/task/build/tmp/test/jar_extract_15645010469699051949_tmp
 /Amazing Numbers/task/build/tmp/test/jar_extract_17003842023332736524_tmp
+/Amazing Numbers/task/build/tmp/test/*
+/Amazing Numbers/task/build/classes/java/main/numbers/display/PropertiesFinder.class
