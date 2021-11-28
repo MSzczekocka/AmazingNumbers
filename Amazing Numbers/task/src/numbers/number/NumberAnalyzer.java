@@ -55,4 +55,15 @@ public class NumberAnalyzer {
         }
         return numAdd.compareTo(numMul)==0;
     }
+
+    public boolean isSquare(BigInteger number){
+        BigInteger temp = number.sqrt();
+        return  number.compareTo(temp.multiply(temp))==0;
+    }
+
+    public boolean isSunny(BigInteger number){
+        number = number.add(new BigInteger(("1")));
+        BigInteger temp = number.sqrt();
+        return  number.compareTo(temp.multiply(temp))==0;
+    }
 }
