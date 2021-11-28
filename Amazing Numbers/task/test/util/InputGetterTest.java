@@ -30,4 +30,26 @@ public class InputGetterTest {
         //then
         Assert.assertEquals(excepted, result);
     }
+    @Test
+    public void getInput_OkTest3(){
+        //given
+        InputGetter inputGetter = new InputGetter();
+        String input = "345 6 sunny";
+        Input excepted = new Input(new BigInteger("345"),6,"sunny");
+        //when
+        Input result = inputGetter.getInput(input);
+        //then
+        Assert.assertEquals(excepted, result);
+    }
+    @Test
+    public void getInput_OkTest4(){
+        //given
+        InputGetter inputGetter = new InputGetter();
+        String input = "8784 2 sunny even";
+        Input excepted = new Input(new BigInteger("8784"),2,"sunny even");
+        //when
+        Input result = inputGetter.getInput(input);
+        //then
+        Assert.assertEquals(excepted, result);
+    }
 }

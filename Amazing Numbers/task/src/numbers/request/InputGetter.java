@@ -20,7 +20,12 @@ public class InputGetter {
         }else{
             String[] result = input.split(" ");
             number = new BigInteger(result[0]);
-            return new Input(number,Integer.parseInt(result[1]),result[2].toLowerCase());
+            String prop = "";
+            for (int i=2 ; i< result.length;i++){
+                prop = prop +" " + result[i];
+            }
+            prop = prop.substring(1);
+            return new Input(number,Integer.parseInt(result[1]),prop.toLowerCase());
         }
     }
 }
