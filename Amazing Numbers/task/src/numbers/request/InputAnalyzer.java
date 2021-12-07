@@ -1,6 +1,7 @@
 package numbers.request;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class InputAnalyzer {
@@ -18,9 +19,15 @@ public class InputAnalyzer {
         return true;
     }
 
-    public boolean okProperties(String input){
+    public String okProperties(ArrayList<String> input){
         String[] ok = {"even","odd","buzz","duck","palindromic","gapful","spy"};
-        return Arrays.asList(ok).contains(input.toLowerCase());
+        String result = "";
+        for(String prop:input){
+            if(!Arrays.asList(ok).contains(prop)){
+                result = result + prop + ", ";
+            }
+        }
+        return result.equals("")? "ok": result.substring(0,result.length()-2);
     }
 
     public void isZero(String input){
