@@ -1,14 +1,15 @@
 package numbers.request;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class Input {
     BigInteger number;
     int noOfNum;
-    String property;
+    ArrayList<String> property;
 
-    public Input(BigInteger number, int noOfNum, String property) {
+    public Input(BigInteger number, int noOfNum, ArrayList<String> property) {
         this.number = number;
         this.noOfNum = noOfNum;
         this.property = property;
@@ -30,11 +31,11 @@ public class Input {
         this.noOfNum = noOfNum;
     }
 
-    public String getProperty() {
+    public ArrayList<String> getProperty() {
         return property;
     }
 
-    public void setProperty(String property) {
+    public void setProperty(ArrayList<String> property) {
         this.property = property;
     }
 
@@ -43,7 +44,7 @@ public class Input {
         return "Input{" +
                 "number=" + number +
                 ", noOfNum=" + noOfNum +
-                ", property='" + property + '\'' +
+                ", property='" + String.join(", ", property) + '\'' +
                 '}';
     }
 

@@ -6,6 +6,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
 
 public class InputGetterTest {
     @Test
@@ -13,7 +14,9 @@ public class InputGetterTest {
         //given
         InputGetter inputGetter = new InputGetter();
         String input = "34";
-        Input excepted = new Input(new BigInteger("34"),1,"all");
+        ArrayList<String> props= new ArrayList<>();
+        props.add("all");
+        Input excepted = new Input(new BigInteger("34"),1,props);
         //when
         Input result = inputGetter.getInput(input);
         //then
@@ -24,7 +27,9 @@ public class InputGetterTest {
         //given
         InputGetter inputGetter = new InputGetter();
         String input = "135 6";
-        Input excepted = new Input(new BigInteger("135"),6,"all");
+        ArrayList<String> props= new ArrayList<>();
+        props.add("all");
+        Input excepted = new Input(new BigInteger("135"),6,props);
         //when
         Input result = inputGetter.getInput(input);
         //then
@@ -35,7 +40,9 @@ public class InputGetterTest {
         //given
         InputGetter inputGetter = new InputGetter();
         String input = "345 6 sunny";
-        Input excepted = new Input(new BigInteger("345"),6,"sunny");
+        ArrayList<String> props= new ArrayList<>();
+        props.add("sunny");
+        Input excepted = new Input(new BigInteger("345"),6,props);
         //when
         Input result = inputGetter.getInput(input);
         //then
@@ -46,7 +53,10 @@ public class InputGetterTest {
         //given
         InputGetter inputGetter = new InputGetter();
         String input = "8784 2 sunny even";
-        Input excepted = new Input(new BigInteger("8784"),2,"sunny even");
+        ArrayList<String> props= new ArrayList<>();
+        props.add("sunny");
+        props.add("even");
+        Input excepted = new Input(new BigInteger("8784"),2,props);
         //when
         Input result = inputGetter.getInput(input);
         //then

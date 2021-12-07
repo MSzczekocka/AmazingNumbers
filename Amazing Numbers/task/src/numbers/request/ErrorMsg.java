@@ -9,12 +9,12 @@ public class ErrorMsg {
             System.out.println("The first parameter should be a natural number or zero.");
             return false;
         }
-        if (inputs.length > 1 && inputs.length < 4) {
+        if (inputs.length > 1) {
             if (analyzer.isNegative(inputs[1]) || !analyzer.isNumeric(inputs[1])) {
                 System.out.println("The second parameter should be a natural number.");
                 return false;
             }
-            if (inputs.length == 3) {
+            if (inputs.length > 2) {
                 if (!analyzer.okProperties(inputs[2])) {
                     System.out.println("The property [" + inputs[2].toUpperCase() + "] is wrong.");
                     System.out.println("Available properties: [EVEN, ODD, BUZZ, DUCK, PALINDROMIC, GAPFUL, SPY]");

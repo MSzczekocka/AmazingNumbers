@@ -1,13 +1,11 @@
 package numbers.display;
 
-import numbers.number.NumberAnalyzer;
 import numbers.request.Input;
 
 import java.math.BigInteger;
 
 public class MultiNumDisplay {
     protected void numbersDisplay(Input request){
-        NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
         PropertiesFinder propertiesFinder = new PropertiesFinder();
         BigInteger number = new BigInteger(String.valueOf(request.getNumber()));
         if(request.getProperty().equals("all")){
