@@ -94,4 +94,43 @@ public class InputAnalyzerTest {
         //then
         Assert.assertEquals("qwerty",result);
     }
+    @Test
+    public void isMutuallyExcl_okTest(){
+        //given
+        InputAnalyzer analyzer = new InputAnalyzer();
+        ArrayList<String> request = new ArrayList<>();
+        request.add("sunny");
+        request.add("even");
+        //when
+        ArrayList<String> result = analyzer.isMutuallyExcl(request);
+        //then
+        Assert.assertEquals(0,result.size());
+    }
+    @Test
+    public void isMutuallyExcl_nokTest(){
+        //given
+        InputAnalyzer analyzer = new InputAnalyzer();
+        ArrayList<String> request = new ArrayList<>();
+        request.add("odd");
+        request.add("even");
+        //when
+        ArrayList<String> result = analyzer.isMutuallyExcl(request);
+        //then
+        Assert.assertEquals("EVEN, ODD",result.get(0));
+    }
+    @Test
+    public void isMutuallyExcl_nokTest2(){
+        //given
+        InputAnalyzer analyzer = new InputAnalyzer();
+        ArrayList<String> request = new ArrayList<>();
+        request.add("odd");
+        request.add("even");
+        request.add("duck");
+        request.add("spy");
+        //when
+        ArrayList<String> result = analyzer.isMutuallyExcl(request);
+        //then
+        Assert.assertEquals("EVEN, ODD",result.get(0));
+        Assert.assertEquals("DUCK, SPY",result.get(2));
+    }
 }

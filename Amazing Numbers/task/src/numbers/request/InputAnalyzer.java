@@ -30,6 +30,18 @@ public class InputAnalyzer {
         return result.equals("")? "ok": result.substring(0,result.length()-2);
     }
 
+    public ArrayList<String> isMutuallyExcl(ArrayList<String> input){
+        ArrayList<String> result = new ArrayList<>();
+        if(input.contains("even")&&input.contains("odd")){
+            result.add("EVEN, ODD");
+        }else if(input.contains("duck")&&input.contains("spy")){
+            result.add("DUCK, SPY");
+        }else if(input.contains("sunny")&&input.contains("square")){
+            result.add("SUNNY, SQUARE");
+        }
+        return result;
+    }
+
     public void isZero(String input){
         if(input.equals("0")){
             System.out.println("Goodbye!");

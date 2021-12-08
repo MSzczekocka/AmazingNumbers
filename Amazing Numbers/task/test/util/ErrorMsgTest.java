@@ -85,4 +85,34 @@ public class ErrorMsgTest {
         //then
         Assert.assertFalse(result);
     }
+    @Test
+    public void isValid_multiOkTest(){
+        //given
+        ErrorMsg errorMsg = new ErrorMsg();
+        String input = "35 2 even duck";
+        //when
+        boolean result = errorMsg.isValid(input);
+        //then
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void isValid_multiNokTest(){
+        //given
+        ErrorMsg errorMsg = new ErrorMsg();
+        String input = "12 4 even spy";
+        //when
+        boolean result = errorMsg.isValid(input);
+        //then
+        Assert.assertFalse(result);
+    }
+    @Test
+    public void isValid_multiNokTest2(){
+        //given
+        ErrorMsg errorMsg = new ErrorMsg();
+        String input = "78 3 even odd spy duck";
+        //when
+        boolean result = errorMsg.isValid(input);
+        //then
+        Assert.assertFalse(result);
+    }
 }
