@@ -131,6 +131,6 @@ public class InputAnalyzerTest {
         ArrayList<String> result = analyzer.isMutuallyExcl(request);
         //then
         Assert.assertEquals("EVEN, ODD",result.get(0));
-        Assert.assertEquals("DUCK, SPY",result.get(2));
+        Assert.assertEquals("DUCK, SPY",result.get(1));
     }
 }
