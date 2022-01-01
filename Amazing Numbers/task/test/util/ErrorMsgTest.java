@@ -6,6 +6,26 @@ import org.junit.Test;
 
 public class ErrorMsgTest {
     @Test
+    public void startWithSpace_OkTest(){
+        //given
+        ErrorMsg errorMsg = new ErrorMsg();
+        String input = " 653";
+        //when
+        boolean result = errorMsg.isValid(input);
+        //then
+        Assert.assertFalse(result);
+    }
+    @Test
+    public void have2Spaces_OkTest(){
+        //given
+        ErrorMsg errorMsg = new ErrorMsg();
+        String input = "33  sunny";
+        //when
+        boolean result = errorMsg.isValid(input);
+        //then
+        Assert.assertFalse(result);
+    }
+    @Test
     public void isNumeric_OkTest(){
         //given
         ErrorMsg errorMsg = new ErrorMsg();

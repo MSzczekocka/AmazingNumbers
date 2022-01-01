@@ -8,6 +8,16 @@ public class ErrorMsg {
         InputAnalyzer analyzer = new InputAnalyzer();
         InputGetter getter = new InputGetter();
         String[] inputs = input.split(" ");
+
+        if (input.startsWith(" ")){
+            System.out.println("The first parameter should be a natural number or zero.");
+            return false;
+        }
+        if (input.contains("  ")){
+            System.out.println("The first parameter should be a natural number or zero.");
+            return false;
+        }
+
         Input request = getter.getInput(input);
 
         if (analyzer.isNegative(inputs[0]) || !analyzer.isNumeric(inputs[0])) {
