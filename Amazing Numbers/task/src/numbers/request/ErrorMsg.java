@@ -18,12 +18,13 @@ public class ErrorMsg {
             return false;
         }
 
-        Input request = getter.getInput(input);
-
         if (analyzer.isNegative(inputs[0]) || !analyzer.isNumeric(inputs[0])) {
             System.out.println("The first parameter should be a natural number or zero.");
             return false;
         }
+
+        Input request = getter.getInput(input);
+
         if (inputs.length > 1) {
             if (analyzer.isNegative(inputs[1]) || !analyzer.isNumeric(inputs[1])) {
                 System.out.println("The second parameter should be a natural number.");
@@ -41,7 +42,7 @@ public class ErrorMsg {
                     System.out.println("There are no numbers with these properties.");
                     return false;
                 }
-                if (!result.equals("")) {
+                if (!result.equals("ok")) {
                     System.out.println("The property [" + result + "] is wrong.");
                     System.out.println("Available properties: [EVEN, ODD, BUZZ, DUCK, PALINDROMIC, GAPFUL, SPY]");
                     return false;
@@ -51,4 +52,3 @@ public class ErrorMsg {
         return true;
     }
 }
-// add handler for start space and multi spaces

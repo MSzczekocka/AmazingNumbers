@@ -123,7 +123,7 @@ public class ErrorMsgTest {
         //when
         boolean result = errorMsg.isValid(input);
         //then
-        Assert.assertFalse(result);
+        Assert.assertTrue(result);
     }
     @Test
     public void isValid_multiNokTest2(){
