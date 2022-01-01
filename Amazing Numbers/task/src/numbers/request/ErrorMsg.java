@@ -23,11 +23,6 @@ public class ErrorMsg {
                 String result = analyzer.okProperties(request.getProperty());
                 ArrayList<String> result2 = analyzer.isMutuallyExcl(request.getProperty());
                 StringBuilder temp = new StringBuilder();
-                if (!result.equals("")) {
-                    System.out.println("The property [" + result + "] is wrong.");
-                    System.out.println("Available properties: [EVEN, ODD, BUZZ, DUCK, PALINDROMIC, GAPFUL, SPY]");
-                    return false;
-                }
                 if(result2.size()>0){
                     for (String s : result2) {
                         temp.append(" [").append(s).append("] ");
@@ -36,9 +31,14 @@ public class ErrorMsg {
                     System.out.println("There are no numbers with these properties.");
                     return false;
                 }
-
+                if (!result.equals("")) {
+                    System.out.println("The property [" + result + "] is wrong.");
+                    System.out.println("Available properties: [EVEN, ODD, BUZZ, DUCK, PALINDROMIC, GAPFUL, SPY]");
+                    return false;
+                }
             }
         }
         return true;
     }
 }
+// add handler for start space and multi spaces

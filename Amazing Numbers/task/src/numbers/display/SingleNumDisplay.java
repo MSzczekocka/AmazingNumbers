@@ -11,11 +11,11 @@ public class SingleNumDisplay {
         PropertiesFinder propertiesFinder = new PropertiesFinder();
         BigInteger number = new BigInteger(String.valueOf(request.getNumber()));
 
-        if (!request.getProperty().equals("all")){
-            while (!propertiesFinder.findProperties(number).contains(request.getProperty())){
-                number = number.add(new BigInteger("1"));
-            }
-        }
+//        if (!request.getProperty().equals("all")){
+//            while (!propertiesFinder.findProperties(number).contains(request.getProperty())){
+//                number = number.add(new BigInteger("1"));
+//            }
+//        }
 
         System.out.println("Properties of " + number);
         System.out.println("        buzz: " + numberAnalyzer.checkBuzzNumber(number));

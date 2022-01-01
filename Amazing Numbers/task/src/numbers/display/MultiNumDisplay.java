@@ -16,14 +16,14 @@ public class MultiNumDisplay {
             }
         }else {
             int temp=0;
-            while(temp<request.getNoOfNum()){
-                if(propertiesFinder.findProperties(number).contains(request.getProperty())){
-                   System.out.print(number + " is ");
-                   System.out.println(propertiesFinder.findProperties(number));
-                   temp++;
-                }
-                number = number.add(new BigInteger("1"));
-            }
+//            while(temp<request.getNoOfNum()){
+//                if(propertiesFinder.findProperties(number).contains(request.getProperty())){
+//                   System.out.print(number + " is ");
+//                   System.out.println(propertiesFinder.findProperties(number));
+//                   temp++;
+//                }
+//                number = number.add(new BigInteger("1"));
+//            }
         }
     }
 }
