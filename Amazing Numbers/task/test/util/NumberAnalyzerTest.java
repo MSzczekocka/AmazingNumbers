@@ -116,44 +116,4 @@ public class NumberAnalyzerTest {
         //then
         Assert.assertFalse(result);
     }
-    @Test
-    public void isSquare_OkTest(){
-        //given
-        NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
-        BigInteger number = new BigInteger("121");
-        //when
-        boolean result = numberAnalyzer.isSquare(number);
-        //then
-        Assert.assertTrue(result);
-    }
-    @Test
-    public void isSquare_NokTest(){
-        //given
-        NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
-        BigInteger number = new BigInteger("5743");
-        //when
-        boolean result = numberAnalyzer.isSquare(number);
-        //then
-        Assert.assertFalse(result);
-    }
-    @Test
-    public void isSunny_OkTest(){
-        //given
-        NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
-        BigInteger number = new BigInteger("143");
-        //when
-        boolean result = numberAnalyzer.isSunny(number);
-        //then
-        Assert.assertTrue(result);
-    }
-    @Test
-    public void isSunny_NokTest(){
-        //given
-        NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
-        BigInteger number = new BigInteger("7692");
-        //when
-        boolean result = numberAnalyzer.isSunny(number);
-        //then
-        Assert.assertFalse(result);
-    }
 }

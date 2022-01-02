@@ -1,11 +1,11 @@
 package util;
 
+import numbers.request.Input;
 import numbers.request.InputAnalyzer;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.ArrayList;
-
+import java.math.BigInteger;
 
 public class InputAnalyzerTest {
     @Test
@@ -52,85 +52,20 @@ public class InputAnalyzerTest {
     public void okProperties_okTest(){
         //given
         InputAnalyzer analyzer = new InputAnalyzer();
-        ArrayList<String> request = new ArrayList<>();
-        request.add("Spy");
+        String request = "spy";
         //when
-        String result = analyzer.okProperties(request);
+        boolean result = analyzer.okProperties(request);
         //then
-        Assert.assertEquals("ok",result);
+        Assert.assertTrue(result);
     }
     @Test
     public void okProperties_nokTest(){
         //given
         InputAnalyzer analyzer = new InputAnalyzer();
-        ArrayList<String> request = new ArrayList<>();
-        request.add("abc");
+        String request = "abc";
         //when
-        String result = analyzer.okProperties(request);
+        boolean result = analyzer.okProperties(request);
         //then
-        Assert.assertEquals("abc",result);
-    }
-    @Test
-    public void okProperties_okTest2(){
-        //given
-        InputAnalyzer analyzer = new InputAnalyzer();
-        ArrayList<String> request = new ArrayList<>();
-        request.add("sunny");
-        request.add("even");
-        //when
-        String result = analyzer.okProperties(request);
-        //then
-        Assert.assertEquals("ok",result);
-    }
-    @Test
-    public void okProperties_nokTest2(){
-        //given
-        InputAnalyzer analyzer = new InputAnalyzer();
-        ArrayList<String> request = new ArrayList<>();
-        request.add("sunny");
-        request.add("qwerty");
-        //when
-        String result = analyzer.okProperties(request);
-        //then
-        Assert.assertEquals("qwerty",result);
-    }
-    @Test
-    public void isMutuallyExcl_okTest(){
-        //given
-        InputAnalyzer analyzer = new InputAnalyzer();
-        ArrayList<String> request = new ArrayList<>();
-        request.add("sunny");
-        request.add("even");
-        //when
-        ArrayList<String> result = analyzer.isMutuallyExcl(request);
-        //then
-        Assert.assertEquals(0,result.size());
-    }
-    @Test
-    public void isMutuallyExcl_nokTest(){
-        //given
-        InputAnalyzer analyzer = new InputAnalyzer();
-        ArrayList<String> request = new ArrayList<>();
-        request.add("odd");
-        request.add("even");
-        //when
-        ArrayList<String> result = analyzer.isMutuallyExcl(request);
-        //then
-        Assert.assertEquals("EVEN, ODD",result.get(0));
-    }
-    @Test
-    public void isMutuallyExcl_nokTest2(){
-        //given
-        InputAnalyzer analyzer = new InputAnalyzer();
-        ArrayList<String> request = new ArrayList<>();
-        request.add("odd");
-        request.add("even");
-        request.add("duck");
-        request.add("spy");
-        //when
-        ArrayList<String> result = analyzer.isMutuallyExcl(request);
-        //then
-        Assert.assertEquals("EVEN, ODD",result.get(0));
-        Assert.assertEquals("DUCK, SPY",result.get(1));
+        Assert.assertFalse(result);
     }
 }

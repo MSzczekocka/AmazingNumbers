@@ -14,7 +14,7 @@ public class InputGetter {
         if(count==0){
             number = new BigInteger(input);
             props.add("all");
-            return new Input(number,1,props);
+            return new Input(number,0,props);
         }else if(count==1){
             number = new BigInteger(input.substring(0,index));
             String noS = input.substring(index+1);
@@ -25,7 +25,7 @@ public class InputGetter {
             String[] result = input.split(" ");
             number = new BigInteger(result[0]);
             for (int i=2 ; i< result.length;i++){
-                props.add(result[i].toLowerCase());
+                props.add(result[i]);
             }
             return new Input(number,Integer.parseInt(result[1]),props);
         }

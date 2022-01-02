@@ -16,8 +16,12 @@ public class SingleNumDisplay {
 
         if (!request.getProperty().contains("all")){
             List<String> props = new ArrayList<>();
+            List<String> props2 =request.getProperty();
+            for(int i=0; i<props2.size();i++){
+                props2.set(i,props2.get(i).toLowerCase());
+            }
             props = Arrays.asList(propertiesFinder.findProperties(number).split(", "));
-            while (!props.containsAll(request.getProperty())){
+            while (!props.containsAll(props2)){
                 props = Arrays.asList(propertiesFinder.findProperties(number).split(", "));
                 number = number.add(new BigInteger("1"));
             }

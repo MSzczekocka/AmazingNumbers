@@ -43,8 +43,17 @@ public class ErrorMsg {
                     return false;
                 }
                 if (!result.equals("ok")) {
-                    System.out.println("The property [" + result + "] is wrong.");
-                    System.out.println("Available properties: [EVEN, ODD, BUZZ, DUCK, PALINDROMIC, GAPFUL, SPY]");
+                    String[] temp2 = result.split(", ");
+                    if (temp2.length==1){
+                        System.out.print("The property ");
+                        System.out.print("[" + result + "]");
+                        System.out.print(" is wrong.");
+                    }else {
+                        System.out.print("The properties ");
+                        System.out.print("[" + String.join("] [", temp2)+"]");
+                        System.out.print(" are wrong.");
+                    }
+                    System.out.println("Available properties: [BUZZ, DUCK, PALINDROMIC, GAPFUL, SPY, SQUARE, SUNNY, EVEN, ODD]");
                     return false;
                 }
             }
