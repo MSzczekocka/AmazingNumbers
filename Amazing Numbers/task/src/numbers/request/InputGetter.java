@@ -25,7 +25,7 @@ public class InputGetter {
             String[] result = input.split(" ");
             number = new BigInteger(result[0]);
             for (int i=2 ; i< result.length;i++){
-                props.add(result[i]);
+                props.add(result[i].toLowerCase());
             }
             return new Input(number,Integer.parseInt(result[1]),props);
         }

@@ -25,6 +25,12 @@ public class PropertiesFinder {
         if(numberAnalyzer.isSpy(number)){
             properties.add("spy");
         }
+        if(numberAnalyzer.isSquare(number)){
+            properties.add("square");
+        }
+        if(numberAnalyzer.isSunny(number)){
+            properties.add("sunny");
+        }
         if(numberAnalyzer.isEven(number)){
             properties.add("even");
         }else{
