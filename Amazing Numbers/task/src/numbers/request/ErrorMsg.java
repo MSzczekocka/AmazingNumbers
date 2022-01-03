@@ -23,13 +23,15 @@ public class ErrorMsg {
             return false;
         }
 
-        Input request = getter.getInput(input);
-
         if (inputs.length > 1) {
             if (analyzer.isNegative(inputs[1]) || !analyzer.isNumeric(inputs[1])) {
                 System.out.println("The second parameter should be a natural number.");
                 return false;
             }
+        }
+
+        Input request = getter.getInput(input);
+
             if (inputs.length > 2) {
                 String result = analyzer.okProperties(request.getProperty());
                 ArrayList<String> result2 = analyzer.isMutuallyExcl(request.getProperty());
@@ -57,7 +59,6 @@ public class ErrorMsg {
                     return false;
                 }
             }
-        }
         return true;
     }
 }

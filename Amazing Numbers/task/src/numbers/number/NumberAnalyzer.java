@@ -76,7 +76,7 @@ public class NumberAnalyzer {
         }
         if(Math.abs(digits[0]-digits[1])!=1){
             return false;
-        }else if(Math.abs(digits[digits.length-2]-digits[digits.length-3])!=1){
+        }else if(Math.abs(digits[digits.length-1]-digits[digits.length-2])!=1){
             return false;
         }
         for(int i=1; i< digits.length-1; i++){

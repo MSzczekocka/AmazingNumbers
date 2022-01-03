@@ -35,4 +35,18 @@ public class InputGetterTest {
         //then
         Assert.assertEquals(excepted, result);
     }
+    @Test
+    public void getInput_OkTest3(){
+        //given
+        InputGetter inputGetter = new InputGetter();
+        String input = "135 6 sunny odd";
+        ArrayList<String> props = new ArrayList<>();
+        props.add("sunny");
+        props.add("odd");
+        Input excepted = new Input(new BigInteger("135"),6,props);
+        //when
+        Input result = inputGetter.getInput(input);
+        //then
+        Assert.assertEquals(excepted, result);
+    }
 }

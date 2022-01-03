@@ -4,6 +4,8 @@ import numbers.request.InputAnalyzer;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 
 public class InputAnalyzerTest {
     @Test
@@ -46,24 +48,38 @@ public class InputAnalyzerTest {
         //then
         Assert.assertFalse(result);
     }
-//    @Test
-//    public void okProperties_okTest(){
-//        //given
-//        InputAnalyzer analyzer = new InputAnalyzer();
-//        String request = "spy";
-//        //when
-//        boolean result = analyzer.okProperties(request);
-//        //then
-//        Assert.assertTrue(result);
-//    }
-//    @Test
-//    public void okProperties_nokTest(){
-//        //given
-//        InputAnalyzer analyzer = new InputAnalyzer();
-//        String request = "abc";
-//        //when
-//        boolean result = analyzer.okProperties(request);
-//        //then
-//        Assert.assertFalse(result);
-//    }
+    @Test
+    public void okProperties_okTest(){
+        //given
+        InputAnalyzer analyzer = new InputAnalyzer();
+        ArrayList<String> request = new ArrayList<>();
+        request.add("spy");
+        //when
+        String result = analyzer.okProperties(request);
+        //then
+        Assert.assertEquals("ok",result);
+    }
+    @Test
+    public void okProperties_nokTest(){
+        //given
+        InputAnalyzer analyzer = new InputAnalyzer();
+        ArrayList<String> request = new ArrayList<>();
+        request.add("abc");
+        //when
+        String result = analyzer.okProperties(request);
+        //then
+        Assert.assertEquals("abc",result);
+    }
+    @Test
+    public void okProperties_nokTest2(){
+        //given
+        InputAnalyzer analyzer = new InputAnalyzer();
+        ArrayList<String> request = new ArrayList<>();
+        request.add("xyz");
+        request.add("zzz");
+        //when
+        String result = analyzer.okProperties(request);
+        //then
+        Assert.assertEquals("xyz, zzz",result);
+    }
 }
