@@ -116,24 +116,4 @@ public class NumberAnalyzerTest {
         //then
         Assert.assertFalse(result);
     }
-    @Test
-    public void isJumping_OkTest(){
-        //given
-        NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
-        BigInteger number = new BigInteger("12101012");
-        //when
-        boolean result = numberAnalyzer.isJumping(number);
-        //then
-        Assert.assertTrue(result);
-    }
-    @Test
-    public void isJumping_NokTest(){
-        //given
-        NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
-        BigInteger number = new BigInteger("65368985");
-        //when
-        boolean result = numberAnalyzer.isJumping(number);
-        //then
-        Assert.assertFalse(result);
-    }
 }

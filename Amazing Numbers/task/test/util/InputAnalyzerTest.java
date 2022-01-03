@@ -1,11 +1,11 @@
 package util;
 
+import numbers.request.Input;
 import numbers.request.InputAnalyzer;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.ArrayList;
-
+import java.math.BigInteger;
 
 public class InputAnalyzerTest {
     @Test
@@ -52,34 +52,20 @@ public class InputAnalyzerTest {
     public void okProperties_okTest(){
         //given
         InputAnalyzer analyzer = new InputAnalyzer();
-        ArrayList<String> request = new ArrayList<>();
-        request.add("spy");
+        String request = "spy";
         //when
-        String result = analyzer.okProperties(request);
+        boolean result = analyzer.okProperties(request);
         //then
-        Assert.assertEquals("ok",result);
+        Assert.assertTrue(result);
     }
     @Test
     public void okProperties_nokTest(){
         //given
         InputAnalyzer analyzer = new InputAnalyzer();
-        ArrayList<String> request = new ArrayList<>();
-        request.add("abc");
+        String request = "abc";
         //when
-        String result = analyzer.okProperties(request);
+        boolean result = analyzer.okProperties(request);
         //then
-        Assert.assertEquals("abc",result);
-    }
-    @Test
-    public void okProperties_nokTest2(){
-        //given
-        InputAnalyzer analyzer = new InputAnalyzer();
-        ArrayList<String> request = new ArrayList<>();
-        request.add("xyz");
-        request.add("zzz");
-        //when
-        String result = analyzer.okProperties(request);
-        //then
-        Assert.assertEquals("xyz, zzz",result);
+        Assert.assertFalse(result);
     }
 }

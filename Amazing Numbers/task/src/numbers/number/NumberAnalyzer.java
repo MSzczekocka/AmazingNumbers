@@ -74,14 +74,17 @@ public class NumberAnalyzer {
         for(int i =0; i< digitsTemp.length; i++){
             digits[i]= (int) digitsTemp[i];
         }
-        if(Math.abs(digits[0]-digits[1])!=1){
-            return false;
-        }else if(Math.abs(digits[digits.length-1]-digits[digits.length-2])!=1){
-            return false;
-        }
-        for(int i=1; i< digits.length-1; i++){
-            if(Math.abs(digits[i]-digits[i+1])!=1){
+        if(digits.length>1){
+            if(Math.abs(digits[0]-digits[1])!=1){
                 return false;
+            }
+            if(Math.abs(digits[digits.length-1]-digits[digits.length-2])!=1){
+                return false;
+            }
+            for(int i=1; i< digits.length-1; i++){
+                if(Math.abs(digits[i]-digits[i+1])!=1){
+                    return false;
+                }
             }
         }
         return true;
