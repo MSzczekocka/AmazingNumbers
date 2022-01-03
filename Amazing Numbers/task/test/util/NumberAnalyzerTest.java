@@ -116,4 +116,24 @@ public class NumberAnalyzerTest {
         //then
         Assert.assertFalse(result);
     }
+    @Test
+    public void isHappy_OkTest(){
+        //given
+        NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
+        BigInteger number = new BigInteger("2008");
+        //when
+        boolean result = numberAnalyzer.isHappy(number);
+        //then
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void isHappy_NokTest(){
+        //given
+        NumberAnalyzer numberAnalyzer = new NumberAnalyzer();
+        BigInteger number = new BigInteger("21");
+        //when
+        boolean result = numberAnalyzer.isHappy(number);
+        //then
+        Assert.assertFalse(result);
+    }
 }

@@ -39,6 +39,11 @@ public class PropertiesFinder {
         }else{
             properties.add("odd");
         }
+        if(numberAnalyzer.isHappy(number)){
+            properties.add("happy");
+        }else{
+            properties.add("sad");
+        }
         return String.join(", ", properties);
     }
 }

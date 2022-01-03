@@ -1,6 +1,7 @@
 package numbers.number;
 
 import java.math.BigInteger;
+import java.util.Calendar;
 
 public class NumberAnalyzer {
 
@@ -88,5 +89,23 @@ public class NumberAnalyzer {
             }
         }
         return true;
+    }
+
+    public boolean isHappy(BigInteger number){
+        String numberS = String.valueOf(number);
+        while(number.compareTo(new BigInteger("9"))>-1){
+            int temp = 0;
+            char[] digitsTemp = numberS.toCharArray();
+            int[] digits = new int[digitsTemp.length];
+            for(int i =0; i< digitsTemp.length; i++){
+                digits[i]= Character.getNumericValue(digitsTemp[i]);
+            }
+            for(int i =0; i< digits.length; i++){
+                temp += digits[i]*digits[i];
+            }
+            number = BigInteger.valueOf(temp);
+            numberS = Integer.toString(temp);
+        }
+        return number.compareTo(new BigInteger("1"))==0;
     }
 }

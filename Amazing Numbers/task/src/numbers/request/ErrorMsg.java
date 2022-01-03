@@ -55,7 +55,7 @@ public class ErrorMsg {
                         System.out.print("[" + String.join("] [", temp2)+"]");
                         System.out.print(" are wrong.");
                     }
-                    System.out.println("Available properties: [BUZZ, DUCK, PALINDROMIC, GAPFUL, SPY, SQUARE, SUNNY, JUMPING, EVEN, ODD]");
+                    System.out.println("Available properties: [EVEN, ODD, BUZZ, DUCK, PALINDROMIC, GAPFUL, SPY, SQUARE, SUNNY, JUMPING, HAPPY, SAD]");
                     return false;
                 }
             }
