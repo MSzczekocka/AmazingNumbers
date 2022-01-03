@@ -35,6 +35,7 @@ public class SingleNumDisplay {
         System.out.println("         spy: " + numberAnalyzer.isSpy(number));
         System.out.println("      square: " + numberAnalyzer.isSquare(number));
         System.out.println("       sunny: " + numberAnalyzer.isSunny(number));
+        System.out.println("     jumping: " + numberAnalyzer.isJumping(number));
         System.out.println("        even: " + numberAnalyzer.isEven(number));
         System.out.println("         odd: " + !numberAnalyzer.isEven(number));
         System.out.println("");

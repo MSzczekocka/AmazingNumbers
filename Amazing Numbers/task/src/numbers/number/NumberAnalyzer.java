@@ -58,12 +58,32 @@ public class NumberAnalyzer {
 
     public boolean isSquare(BigInteger number){
         BigInteger temp = number.sqrt();
-        return  number.compareTo(temp.multiply(temp))==0;
+        return number.compareTo(temp.multiply(temp))==0;
     }
 
     public boolean isSunny(BigInteger number){
         number = number.add(new BigInteger(("1")));
         BigInteger temp = number.sqrt();
         return  number.compareTo(temp.multiply(temp))==0;
+    }
+
+    public boolean isJumping(BigInteger number){
+        String temp = number.toString();
+        char[] digitsTemp = temp.toCharArray();
+        int[] digits = new int[digitsTemp.length];
+        for(int i =0; i< digitsTemp.length; i++){
+            digits[i]= (int) digitsTemp[i];
+        }
+        if(Math.abs(digits[0]-digits[1])!=1){
+            return false;
+        }else if(Math.abs(digits[digits.length-2]-digits[digits.length-3])!=1){
+            return false;
+        }
+        for(int i=1; i< digits.length-1; i++){
+            if(Math.abs(digits[i]-digits[i+1])!=1){
+                return false;
+            }
+        }
+        return true;
     }
 }

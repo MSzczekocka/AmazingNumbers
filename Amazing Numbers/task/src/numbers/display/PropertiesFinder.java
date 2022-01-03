@@ -31,6 +31,9 @@ public class PropertiesFinder {
         if(numberAnalyzer.isSunny(number)){
             properties.add("sunny");
         }
+        if(numberAnalyzer.isJumping(number)){
+            properties.add("jumping");
+        }
         if(numberAnalyzer.isEven(number)){
             properties.add("even");
         }else{

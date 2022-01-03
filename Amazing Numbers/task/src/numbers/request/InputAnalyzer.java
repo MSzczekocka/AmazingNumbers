@@ -20,7 +20,7 @@ public class InputAnalyzer {
     }
 
     public String okProperties(ArrayList<String> input){
-        String[] ok = {"even","odd","buzz","duck","palindromic","gapful","spy", "sunny", "square"};
+        String[] ok = {"even","odd","buzz","duck","palindromic","gapful","spy", "sunny", "square","jumping"};
         String result = "";
         for(String prop:input){
             if(!Arrays.asList(ok).contains(prop.toLowerCase())){

@@ -1,11 +1,9 @@
 package util;
 
-import numbers.request.Input;
 import numbers.request.InputAnalyzer;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.math.BigInteger;
 
 public class InputAnalyzerTest {
     @Test
@@ -48,24 +46,24 @@ public class InputAnalyzerTest {
         //then
         Assert.assertFalse(result);
     }
-    @Test
-    public void okProperties_okTest(){
-        //given
-        InputAnalyzer analyzer = new InputAnalyzer();
-        String request = "spy";
-        //when
-        boolean result = analyzer.okProperties(request);
-        //then
-        Assert.assertTrue(result);
-    }
-    @Test
-    public void okProperties_nokTest(){
-        //given
-        InputAnalyzer analyzer = new InputAnalyzer();
-        String request = "abc";
-        //when
-        boolean result = analyzer.okProperties(request);
-        //then
-        Assert.assertFalse(result);
-    }
+//    @Test
+//    public void okProperties_okTest(){
+//        //given
+//        InputAnalyzer analyzer = new InputAnalyzer();
+//        String request = "spy";
+//        //when
+//        boolean result = analyzer.okProperties(request);
+//        //then
+//        Assert.assertTrue(result);
+//    }
+//    @Test
+//    public void okProperties_nokTest(){
+//        //given
+//        InputAnalyzer analyzer = new InputAnalyzer();
+//        String request = "abc";
+//        //when
+//        boolean result = analyzer.okProperties(request);
+//        //then
+//        Assert.assertFalse(result);
+//    }
 }
