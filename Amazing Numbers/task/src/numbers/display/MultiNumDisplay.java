@@ -33,10 +33,18 @@ public class MultiNumDisplay {
             props2 = removeMinus(props2);
             props = Arrays.asList(propertiesFinder.findProperties(number).split(", "));
             while(temp<request.getNoOfNum()){
-                if(props.containsAll(props2)&!props.containsAll(noProps2)){
-                   System.out.print(number + " is ");
-                   System.out.println(propertiesFinder.findProperties(number));
-                   temp++;
+                if(props.containsAll(props2)){
+                    boolean contMin = false;
+                    for (int i=0; i<noProps2.size();i++){
+                        if(props.contains(noProps2.get(i))){
+                            contMin = true;
+                        }
+                    }
+                    if(!contMin){
+                        System.out.print(number + " is ");
+                        System.out.println(propertiesFinder.findProperties(number));
+                        temp++;
+                    }
                 }
                 number = number.add(new BigInteger("1"));
                 props = Arrays.asList(propertiesFinder.findProperties(number).split(", "));
