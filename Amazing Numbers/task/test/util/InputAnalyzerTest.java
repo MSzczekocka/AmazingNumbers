@@ -83,4 +83,24 @@ public class InputAnalyzerTest {
         //then
         Assert.assertEquals("xyz, zzz",result);
     }
+    @Test
+    public void theSame_okTest(){
+        //given
+        InputAnalyzer analyzer = new InputAnalyzer();
+        ArrayList<String> request = new ArrayList<>();
+        request.add("-even");
+        request.add("even");
+        request.add("duck");
+        request.add("palindromic");
+        //when
+        ArrayList<String> result = InputAnalyzer.theSame(request);
+        ArrayList<String> result2 = new ArrayList<>();
+        result2.add("EVEN, -EVEN");
+        //then
+        Assert.assertTrue(result2.containsAll(result));
+        Assert.assertEquals(1, result.size());
+    }
+
+
+
 }

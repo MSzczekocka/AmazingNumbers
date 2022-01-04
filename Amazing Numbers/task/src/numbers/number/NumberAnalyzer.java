@@ -92,20 +92,37 @@ public class NumberAnalyzer {
     }
 
     public boolean isHappy(BigInteger number){
-        String numberS = String.valueOf(number);
-        while(number.compareTo(new BigInteger("9"))>-1){
-            int temp = 0;
-            char[] digitsTemp = numberS.toCharArray();
-            int[] digits = new int[digitsTemp.length];
-            for(int i =0; i< digitsTemp.length; i++){
-                digits[i]= Character.getNumericValue(digitsTemp[i]);
-            }
-            for(int i =0; i< digits.length; i++){
-                temp += digits[i]*digits[i];
-            }
-            number = BigInteger.valueOf(temp);
-            numberS = Integer.toString(temp);
+        while(number.compareTo(new BigInteger("1")) != 0 && number.compareTo(new BigInteger("4")) != 0){
+            number = isHappyNumber(number);
         }
-        return number.compareTo(new BigInteger("1"))==0;
+
+        return number.compareTo(new BigInteger("1")) == 0;
+
+//        String numberS = String.valueOf(number);
+//        while(number.compareTo(new BigInteger("1"))==0||number.compareTo(new BigInteger("4"))==0){
+//            int temp = 0;
+//            char[] digitsTemp = numberS.toCharArray();
+//            int[] digits = new int[digitsTemp.length];
+//            for(int i =0; i< digitsTemp.length; i++){
+//                digits[i]= Character.getNumericValue(digitsTemp[i]);
+//            }
+//            for(int i =0; i< digits.length; i++){
+//                temp += digits[i]*digits[i];
+//            }
+//            number = BigInteger.valueOf(temp);
+//            numberS = Integer.toString(temp);
+//        }
+//        return number.compareTo(new BigInteger("1"))==0;
+    }
+
+    public static BigInteger isHappyNumber(BigInteger num){
+        BigInteger rem = new BigInteger("0");
+        BigInteger sum = new BigInteger("0");
+        while(num.compareTo(new BigInteger("0")) > 0){
+            rem = num.mod(new BigInteger("10"));
+            sum = sum.add(rem.multiply(rem));
+            num = num.divide(new BigInteger("10"));
+        }
+        return sum;
     }
 }
